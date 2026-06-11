@@ -1,10 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: nginx-deployment
   namespace: nginx
+
 spec:
-  replicas: 1  
+  replicas: 1
 
   selector:
     matchLabels:
@@ -17,9 +19,9 @@ spec:
 
     spec:
       containers:
-      - name: nginx
+      - name: nodejs
         image: sujithmanu/nodejs:tag
         imagePullPolicy: Always
 
         ports:
-        - containerPort: 80
+        - containerPort: 3000
