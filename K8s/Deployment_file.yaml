@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: sujithmanu/nodejs:tag
+        image: sujithdev-app:latest
         imagePullPolicy: Always
 
         ports:
